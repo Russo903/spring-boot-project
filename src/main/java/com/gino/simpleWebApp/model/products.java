@@ -1,10 +1,16 @@
 package com.gino.simpleWebApp.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 @Data
+@Component
+@Entity
 public class products {
+    @Id
     private int prod_id;
     private String prod_name;
     private int prod_price;
@@ -15,4 +21,7 @@ public class products {
         this.prod_price = prod_price;
     }
 
+    public products() {
+
+    }
 }
